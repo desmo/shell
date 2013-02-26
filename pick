@@ -1,0 +1,13 @@
+#!/bin/sh
+
+# pick:select argument
+
+for i
+	do
+		echo -n "$i?"
+		read response
+		case $response in
+		y*) echo $i;;
+		q*) break
+		esac
+	done
